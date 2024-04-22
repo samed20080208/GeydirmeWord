@@ -1,0 +1,31 @@
+﻿<Window x:Class="GeydirmeWord.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GeydirmeWord"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+
+            <WrapPanel Orientation="Horizontal">
+                <TextBox x:Name="FilePathBox" MinWidth="190" BorderThickness = "2" BorderBrush="LightGray" Text="Write file path... " FontSize="25" Height="40"/>
+                    <Button  x:Name="okBtn" BorderThickness = "2" BorderBrush="LightGray" Width ="34" Content="^"  FontSize="25" Height="40" Background="White" Click="okBtn_Click"/>
+                    <Button  x:Name="saveBtn" BorderThickness = "2" BorderBrush="LightGray" Width = "96" Content="Save"  FontSize="25" Height="40" Background="White"/>
+                    <Button  x:Name="copyBtn" BorderThickness = "2" BorderBrush="LightGray" Width = "116" Content="Copy"  FontSize="25" Height="40" Background="White" Click="copyBtn_Click"/>
+                    <Button  x:Name="cutBtn" BorderThickness = "2" BorderBrush="LightGray" Width = "96" Content="Cut"  FontSize="25" Height="40" Background="White" Click="cutBtn_Click"/>
+                    <Button  x:Name="pasteBtn" BorderThickness = "2" BorderBrush="LightGray" Width = "114" Content="Paste"  FontSize="25" Height="40" Background="White" Click="pasteBtn_Click"/>
+                <Button  x:Name="selectAllBtn" BorderThickness = "2" BorderBrush="LightGray" Width = "138" Content="Sellect all"  FontSize="25" Height="40" Background="White" Click="selectAllBtn_Click"/>
+            </WrapPanel>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <RichTextBox x:Name="wordpad" BorderThickness="2" BorderBrush="LightGray" />
+        </Grid>
+    </Grid>
+</Window>
